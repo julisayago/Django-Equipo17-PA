@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+        }
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #dbdbdb;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px; /* Borde redondeado */
+        }
+        .navbar-logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        .navbar-search {
+            display: flex;
+            align-items: center;
+            border: 1px solid #dbdbdb;
+            border-radius: 40px;
+            padding: 5px;
+            margin-right: 15px;
+        }
+        .navbar-search input {
+            border: none;
+            outline: none;
+            width: 150px;
+            padding: 5px;
+        }
+
+        .navbar-icons img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .feed {
+            max-width: 800px; /* Aumento en el ancho del feed */
+            margin: 20px auto;
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #efefef;
+        }
+        .post:last-child {
+            border-bottom: none;
+        }
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .post-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .post-header .username {
+            font-weight: bold;
+        }
+        .post-image {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+        }
+        .post-caption {
+            margin-top: 10px;
+        }
+        /* Estilos adicionales para simular la barra lateral de recomendaciones */
+        .suggested-box {
+            width: 250px;
+            margin-top: 20px;
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            max-height: 250px; /* Altura máxima del box */
+            overflow-y: auto; /* Scroll si es necesario */
+        }
+        .suggested-header {
+            padding: 10px;
+            border-bottom: 1px solid #dbdbdb;
+            font-weight: bold;
+        }
+        .suggested-list {
+            padding: 10px;
+        }
+        .suggested-user {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .suggested-user img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .suggested-user .username {
+            font-weight: bold;
+        }
+        .loading-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .loading-logo img {
+            width: 50px;
+            height: 50px;
+        }
+        /* Estilos para los botones de interacción */
+        .post-interaction {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .post-interaction i {
+            font-size: 1.2rem;
+            margin-right: 10px;
+            cursor: pointer;
+            
+        }
+        .comment-input {
+            width: calc(100% - 20px); /* Ajustar el tamaño del input */
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            outline: none;
+            font-size: 1rem;
+            margin-top: 10px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">Photogram</div>
+        <div class="navbar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar">
+        </div>
+        <div class="navbar-icons">
+            <a href="{% url 'profile' %}">
+                <img src="https://i.pinimg.com/564x/74/f4/62/74f46208ff979b22d5762021b63e8511.jpg" alt="Profile">
+            </a>
+        </div>
+        
+        
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+
+        <div class="feed">
+             <div class="post">
+                <div class="post-header">
+                    <img src="https://i.pinimg.com/236x/cf/2b/1d/cf2b1dd0624dd5e24fe0a10590f9eccd.jpg" alt="User Avatar">
+                    <div class="username">pablo.suarez10</div>
+                </div>
+                <img class="post-image" src="https://scontent.feze8-1.fna.fbcdn.net/v/t39.30808-6/438159950_459455366653894_1035510905707296963_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=m93P7v4QWdoQ7kNvgGmC2zt&_nc_ht=scontent.feze8-1.fna&oh=00_AYAMJz7vDfRNGrZSi-rUk5unkdA6hTzFM2QqFUbKlTOvfg&oe=668696EA" alt="Post Image">
+                <div class="post-caption">
+                    <strong>pablo.suarez10</strong> 🔙🔙🔙
+                </div>
+                
+                <div class="post-interaction">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-share"></i>
+                    <i class="far fa-bookmark"></i>
+                </div>
+                
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://i.pinimg.com/736x/2e/88/95/2e8895583f7c42322ff5a1579bbf0e7e.jpg" alt="User Avatar">
+                    <div class="username">julia_diaz</div>
+                </div>
+                <img class="post-image" src="https://i.pinimg.com/736x/b1/c8/5c/b1c85ca04bfd4f673f0eaac31743cd65.jpg" alt="Post Image">
+                <div class="post-caption">
+                    <strong>julia_diaz</strong> Extrañando
+                </div>
+                
+                <div class="post-interaction">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-share"></i>
+                    <i class="far fa-bookmark"></i>
+                </div>
+                
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+            </div>
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://i.pinimg.com/736x/34/19/f0/3419f0ed0cafd956e39beaaa2def53ac.jpg" alt="User Avatar">
+                    <div class="username">tatiana__</div>
+                </div>
+                <img class="post-image" src="https://i.pinimg.com/736x/34/19/f0/3419f0ed0cafd956e39beaaa2def53ac.jpg" alt="Post Image">
+                <div class="post-caption">
+                    <strong>tatiana__</strong> 😊😊😊
+                </div>
+                
+                <div class="post-interaction">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-share"></i>
+                    <i class="far fa-bookmark"></i>
+                </div>
+                
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+            </div>
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://i.pinimg.com/originals/42/35/10/423510dd96085c5e6307877bbe64ce5d.jpg" alt="User Avatar">
+                    <div class="username">oscarporrino29</div>
+                </div>
+                <img class="post-image" src="https://i.pinimg.com/originals/90/7e/ff/907effad2b7b4a042bd538a28491ba27.jpg" alt="Post Image">
+                <div class="post-caption">
+                    <strong>oscarporrino29</strong> Hermano
+                </div>
+                
+                <div class="post-interaction">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-share"></i>
+                    <i class="far fa-bookmark"></i>
+                </div>
+                
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+            </div>
+            <div class="post">
+                <div class="post-header">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtUvXR_PBMdFqGNhvLOyRhAPK6WskLVZC0pg&s" alt="User Avatar">
+                    <div class="username">LauraFernándezViajes</div>
+                </div>
+                <img class="post-image" src="https://i.pinimg.com/564x/2b/5e/07/2b5e074fa55a177e92e6892f052043c8.jpg" alt="Post Image">
+                <div class="post-caption">
+                    <strong>LauraFernándezViajes</strong> Una nueva aventura ✈️
+                </div>
+                <div class="post-interaction">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-share"></i>
+                    <i class="far fa-bookmark"></i>
+                </div>
+                
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+            </div>
+            
+
+            <div class="loading-logo">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/011/299/215/small_2x/simple-loading-or-buffering-icon-design-png.png" alt="Loading">
+            </div>
+        </div>
+
+        <div class="suggested-box">
+            <div class="suggested-header">Sugerencias</div>
+            <div class="suggested-list">
+                <div class="suggested-user">
+                    <img src="https://i.pinimg.com/564x/8d/ed/6a/8ded6a1bb4a8ceaef990aef06427b129.jpg" alt="User Avatar">
+                    <div class="username">carlasimeone</div>
+                </div>
+                <div class="suggested-user">
+                    <img src="https://i.pinimg.com/736x/07/bc/59/07bc59f9787fbbabfd05d258dd697fb6.jpg" alt="User Avatar">
+                    <div class="username">jjuanpablo</div>
+                </div>
+                <div class="suggested-user">
+                    <img src="https://i.pinimg.com/236x/46/a2/60/46a26044cb01ccfe43065e307a399ce1.jpg" alt="User Avatar">
+                    <div class="username">stella.lloris</div>
+                </div>
+                <div class="suggested-user">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGWvCHWxPe_ODYs92FgdYtyVrr7NhGYF0q7g&s" alt="User Avatar">
+                    <div class="username">ivan_perez_07</div>
+                </div>
+                <div class="suggested-user">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-b75e21067663b7245197a62d8519b035" alt="User Avatar">
+                    <div class="username">antonella.massa</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>
