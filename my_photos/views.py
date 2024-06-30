@@ -6,16 +6,20 @@ from django.shortcuts import render
 
 
 
+from django.contrib import messages
+
 def login_view(request):
     if request.method == "POST":
-        username = request.POST['username']
-        password = request.POST['password']
+        username = request.POST.get('username')
+        password = request.POST.get('password')
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
             return redirect('home')  # Redirigir a la página "Home"
         else:
-            return HttpResponse("Usuario o contraseña incorrectos")
+            messages.error(request, "Usuario o contraseña incorrectos")
+            # No redirigimos, renderizamos la misma página con el mensaje de error
+            return render(request, 'my_photos/login.html', {'error_message': "Usuario o contraseña incorrectos"})
     return render(request, 'my_photos/login.html')
 
 @login_required
