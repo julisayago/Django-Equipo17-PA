@@ -3,8 +3,8 @@
 Este es un proyecto de una aplicación de intercambio de fotos diseñada para conectar a las personas a través de imágenes.
 
 # Links importantes:
--Link a la presentación en Google Slides: https://docs.google.com/presentation/d/1apePV5AOeZxayK8LSAsnASqIiOD_Jm51QBIrHbanles/edit#slide=id.g21541b24c8c_0_0
--Link al video: https://drive.google.com/file/d/1tRAscbLIZYFnDteMYRIhYSR-gB7ZDtK9/view?usp=sharing
+- Link a la presentación en Google Slides: https://docs.google.com/presentation/d/1apePV5AOeZxayK8LSAsnASqIiOD_Jm51QBIrHbanles/edit#slide=id.g21541b24c8c_0_0
+- Link al video: https://drive.google.com/file/d/1tRAscbLIZYFnDteMYRIhYSR-gB7ZDtK9/view?usp=sharing
 
 ## Requisitos
 
@@ -53,10 +53,10 @@ Este es un proyecto de una aplicación de intercambio de fotos diseñada para co
 4. Desde la página de inicio, accede a tu perfil.
 
 ## Solución de errores
-- 'pip' is not recognized as an internal or external command, operable program or batch file.
+'pip' is not recognized as an internal or external command, operable program or batch file.
 Solución:
-Instalar pip desde la terminal: https://pip.pypa.io/en/stable/installation/
-Además de instalar pip en el entorno, pip está disponible como una aplicación zip independiente. Se puede descargar desde: https://bootstrap.pypa.io/pip/pip.pyz
+- Instalar pip desde la terminal: https://pip.pypa.io/en/stable/installation/
+- Además de instalar pip en el entorno, pip está disponible como una aplicación zip independiente. Se puede descargar desde: https://bootstrap.pypa.io/pip/pip.pyz
 
 ## Acceso al Panel de Administración
 
