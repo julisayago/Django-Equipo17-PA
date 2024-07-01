@@ -3,8 +3,8 @@
 Este es un proyecto de una aplicación de intercambio de fotos diseñada para conectar a las personas a través de imágenes.
 
 # Links importantes:
-Link a la presentación en Google Slides: https://docs.google.com/presentation/d/1apePV5AOeZxayK8LSAsnASqIiOD_Jm51QBIrHbanles/edit#slide=id.g21541b24c8c_0_0
-Link al video: https://drive.google.com/file/d/1tRAscbLIZYFnDteMYRIhYSR-gB7ZDtK9/view?usp=sharing
+-Link a la presentación en Google Slides: https://docs.google.com/presentation/d/1apePV5AOeZxayK8LSAsnASqIiOD_Jm51QBIrHbanles/edit#slide=id.g21541b24c8c_0_0
+-Link al video: https://drive.google.com/file/d/1tRAscbLIZYFnDteMYRIhYSR-gB7ZDtK9/view?usp=sharing
 
 ## Requisitos
 
